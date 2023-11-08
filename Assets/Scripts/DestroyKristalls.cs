@@ -6,6 +6,6 @@ public class DestroyKristalls : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

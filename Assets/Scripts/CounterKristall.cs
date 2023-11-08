@@ -8,32 +8,32 @@ public class CounterKristall : MonoBehaviour
     [SerializeField] private TMP_Text _redText;
     [SerializeField] private TMP_Text _blueText;
     [SerializeField] private TMP_Text _greenText;
-    private int _counterGreen;
-    private int _counterRed;
-    private int _counterBlue;
+    public int CounterGreen;
+    public int CounterRed;
+    public int CounterBlue;
     public void AddKristall(int ID)
     {
         if (ID==0)
         {
-            _counterBlue++;
+            CounterBlue++;
             Debug.Log("синий");
         }
         else if (ID==1)
         {
-            _counterGreen++;
+            CounterGreen++;
             Debug.Log("зеленый");
         }
         else if (ID==2)
         {
-            _counterRed++;
+            CounterRed++;
             Debug.Log("красный");
         }
         UpdateText();
     }
     private void UpdateText()
     {
-        _redText.text = "красные: " + _counterRed;
-        _blueText.text = "синие: " + _counterBlue;
-        _greenText.text = "зеленые: " + _counterGreen;
+        _redText.text = "красные: " + CounterRed;
+        _blueText.text = "синие: " + CounterBlue;
+        _greenText.text = "зеленые: " + CounterGreen;
     }
 }

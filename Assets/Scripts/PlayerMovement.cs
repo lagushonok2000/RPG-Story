@@ -9,10 +9,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _move;
     private const int _layerKristall = 6;
 
-    private void Start() =>
+    private void Start()
+    {
         _controller = gameObject.GetComponent<CharacterController>();
-
-
+        Time.timeScale= 1.0f;
+    }
+        
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == _layerKristall)
