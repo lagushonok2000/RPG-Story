@@ -7,7 +7,7 @@ using TMPro;
 public class LevelTimer : MonoBehaviour
 {
     [SerializeField] private  TMP_Text _timerText;
-    [SerializeField] private float[] _levelsTime;
+    [SerializeField] private LevelsSO _config;
     [SerializeField] private GameObject _victory;
     [SerializeField] private GameObject _defeat;
     [SerializeField] private CounterKristall _countKristall;
@@ -21,7 +21,7 @@ public class LevelTimer : MonoBehaviour
     private IEnumerator Timer()
     {
         int _smoothness;
-        float currentTime = _levelsTime[CurrentLevels.Level];
+        float currentTime = _config.TimeOnLevel[SaveGame.Data.CurrentLevel];
 
         _smoothness = 1;
 
@@ -34,11 +34,11 @@ public class LevelTimer : MonoBehaviour
 
         _timerText.text = "Время вышло";
         Time.timeScale = 0;
-
-        if (_countKristall.CounterBlue >= 30 || _countKristall.CounterGreen >= 30 || _countKristall.CounterRed >= 30)
+        int count = _config.KristallsOnLevel[SaveGame.Data.CurrentLevel];
+        if (_countKristall.CounterBlue >= count || _countKristall.CounterGreen >= count || _countKristall.CounterRed >= count)
         {
             _victory.SetActive(true);
-            CurrentLevels.Level++;
+ 
         }
         else
         {

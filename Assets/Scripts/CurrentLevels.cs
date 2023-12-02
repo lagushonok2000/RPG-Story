@@ -1,5 +1,10 @@
 
 public static class CurrentLevels
 {
-    public static int Level = 0;
+    public static KColor KristallColor;
 }
+public enum KColor
+{
+    Red, Green, Blue
+}
+   
