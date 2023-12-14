@@ -10,8 +10,8 @@ public class KristallGenerator : MonoBehaviour
     [SerializeField] private int _countKristallInGroupMin;
     [SerializeField] private int _countKristallInGroupMax;
     [SerializeField] private float _respawnTime;
+    private Kristall[] _allKristall;
     private bool _stopTimer;
-    private Kristall[] _allKristall;  
 
     private void Start()
     {
@@ -104,5 +104,4 @@ public class KristallGenerator : MonoBehaviour
             SpawnKristalls();
         }
     }
-
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCScale : MonoBehaviour
@@ -11,6 +9,7 @@ public class NPCScale : MonoBehaviour
     [SerializeField] private float _widthPoint;
     private float[] _allXPositions;
     private int _constPlus;
+
     private void Awake()
     {
         _constPlus = _scaleSectorsCount / 2;
@@ -29,4 +28,3 @@ public class NPCScale : MonoBehaviour
         _point.anchoredPosition = new Vector2(_allXPositions[_currentRespect + _constPlus], _point.anchoredPosition.y);
     }
 }
-  

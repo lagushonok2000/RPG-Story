@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +9,7 @@ public class CounterKristall : MonoBehaviour
     public int CounterGreen;
     public int CounterRed;
     public int CounterBlue;
+
     public void AddKristall(int ID)
     {
         if (ID==0)

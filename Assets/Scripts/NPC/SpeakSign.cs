@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 
 public class SpeakSign : MonoBehaviour
 {
@@ -15,6 +14,7 @@ public class SpeakSign : MonoBehaviour
           Time.timeScale = 0f;
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         _canvas.SetActive(true);

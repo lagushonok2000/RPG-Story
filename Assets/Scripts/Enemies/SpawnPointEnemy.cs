@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class SpawnPointEnemy : MonoBehaviour
 {
@@ -16,6 +13,7 @@ public class SpawnPointEnemy : MonoBehaviour
         _isSpawning = true;
         StartCoroutine(Spawner());
     }
+
     private void Spawn()
     {
         var random = Random.Range(0,_spawnPointsEnemy.Length);

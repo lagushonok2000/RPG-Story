@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,6 +15,7 @@ public class MainMenu : MonoBehaviour
         _exitGameButton.onClick.AddListener(ExitGame);
         SaveGame.LoadData();
     }
+
     private void StartNewGame()
     {
         SaveGame.Data.CurrentLevel = 0;

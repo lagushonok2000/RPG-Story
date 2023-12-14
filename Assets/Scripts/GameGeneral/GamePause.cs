@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +8,7 @@ public class GamePause : MonoBehaviour
     [SerializeField] private Button _stopPauseButton;
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private Button _mainMenuButton;
+
     private void Start()
     {
         _pauseButton.onClick.AddListener(PauseButton);
@@ -36,5 +34,4 @@ public class GamePause : MonoBehaviour
         Time.timeScale = 1.0f;
         _pausePanel.SetActive(false);
     }
-
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StartScenePositions : MonoBehaviour
@@ -23,6 +21,5 @@ public class StartScenePositions : MonoBehaviour
         {
             _nPC[i].transform.position = _spawnPoints[i].position;
         }
-
     }
 }

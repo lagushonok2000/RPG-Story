@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,6 +22,7 @@ public class ChooseKristallsPanel : MonoBehaviour
         _chooseGreen.onClick.AddListener(() => OpenNPCScene(KColor.Green));
         _chooseRed.onClick.AddListener(() => OpenNPCScene(KColor.Red));
     }
+
     public void OpenPanel()
     {
         int k = 0;
@@ -67,6 +66,4 @@ public class ChooseKristallsPanel : MonoBehaviour
         CurrentLevels.KristallColor = color;
         SceneManager.LoadScene(1);
     }
-
-       
 }

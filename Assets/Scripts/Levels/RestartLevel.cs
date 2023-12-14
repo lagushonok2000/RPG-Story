@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class RestartLevel : MonoBehaviour
 {
     [SerializeField] private Button _restartButton;
+
     private void Start()
     {
         _restartButton.onClick.AddListener(RestartButton);
@@ -15,5 +16,4 @@ public class RestartLevel : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
 }

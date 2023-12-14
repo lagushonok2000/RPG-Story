@@ -1,6 +1,4 @@
 using System.Collections;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -18,6 +16,7 @@ public class LevelTimer : MonoBehaviour
     {
         StartCoroutine(Timer());
     }
+
     private IEnumerator Timer()
     {
         int _smoothness;
